@@ -42,19 +42,30 @@ public:
 		if (FRONT == -1)
 			cout << "Queue underflow\n";
 		return;
-	}
-	cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << "\n";
+		}
+		cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << "\n";
 
-	if (FRONT == REAR) {
+		if (FRONT == REAR) {
 		FRONT = -1;
 		REAR = -1;
 
-	}
-	else {
+		}
+		else {
 
 		if (FRONT == max - 1)
 			FRONT = 0;
 		else
 			FRONT = FRONT + 1;
+		}
 	}
+void display() {
+	int FRONT_position = FRONT;
+	int REAR_position = REAR;
+
+	if (FRONT == -1) {
+		cout << "Queue is empty\n";
+		return;
+	}
+
+
 };
